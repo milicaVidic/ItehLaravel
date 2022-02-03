@@ -10,6 +10,12 @@ class Tekstopisac extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'broj_pesama',
+    ];
+
     public function pesme()
     {
         return $this->hasMany(Pesma::class);

@@ -11,6 +11,13 @@ class Pesma extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'godina',
+        'pevac_id',
+        'tekstopisac_id'
+    ];
+
     public function tekstopisac()
     {
         return $this->belongsTo(Tekstopisac::class);

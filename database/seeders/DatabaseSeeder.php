@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\PesmaSeeder;
+use Database\Seeders\TekstopisacSeeder;
+use Database\Seeders\PevacSeeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +17,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $pesmaS = new PesmaSeeder;
+        $pesmaS->run();
+        $tekstopisacS = new TekstopisacSeeder;
+        $tekstopisacS->run();
+        $pevacS = new PevacSeeder;
+        $pevacS->run();
     }
 }

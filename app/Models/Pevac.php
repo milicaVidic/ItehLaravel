@@ -10,6 +10,13 @@ class Pevac extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'godine',
+        'instagram'
+    ];
+
     public function pesme()
     {
         return $this->hasMany(Pesma::class);
